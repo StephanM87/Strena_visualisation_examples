@@ -1,0 +1,47 @@
+<main cds-text="body" cds-layout="vertical gap:lg p:lg">
+    <h1 cds-text="heading">Strenda biocatalysis</h1>
+    <h2 cds-text="heading2">Identifier driven data acquisition</h2>
+  </main>
+  
+<button (click)="printurl()">print smiles</button>
+  
+  
+  <div cds-layout="grid gap:md" class="container">
+  <cds-form-group layout="vertical" cds-layout="col:4" [formGroup]="formfb">
+    <cds-input layout="compact">
+        <label>Regent name</label>
+        <input placeholder="name" formControlName="name">
+    </cds-input>
+    
+    <cds-input layout="compact" >
+        <label>Inchi-code</label>
+        <input placeholder="name" formControlName="name">
+    </cds-input>
+  
+    <cds-input layout="compact" status="error">
+        <label>SMILES code</label>
+        <input placeholder="name" formControlName="smiles">
+    </cds-input>
+  
+    <cds-input layout="compact">
+        <label>formula</label>
+        <input placeholder="name" formControlName="formula" />
+    </cds-input>
+
+    <cds-input layout="compact">
+        <label>reagent role</label>
+        <input placeholder="name" formControlName="reactionRole"/>
+    </cds-input>
+  
+  </cds-form-group> 
+
+  <div cds-layout="cols:7" class="ketcher" >
+
+    <ng-template [ngIf]="condition">
+        
+        <iframe #iframe src="./assets/lib/ketcher/ketcher.html" width="400" height="600"></iframe>
+        </ng-template>
+  </div>
+
+  </div>
+  
