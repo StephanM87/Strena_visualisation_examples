@@ -3,7 +3,7 @@
     <h2 cds-text="heading2">Identifier driven data acquisition</h2>
   </main>
   
-<button (click)="printurl()">print smiles</button>
+
   
   
   <div cds-layout="grid gap:md" class="container">
@@ -14,12 +14,12 @@
     </cds-input>
     
     <cds-input layout="compact" >
-        <label>Inchi-code</label>
-        <input placeholder="name" formControlName="name">
+        <label>Inchi</label>
+        <input placeholder="name" formControlName="inchi">
     </cds-input>
   
-    <cds-input layout="compact" status="error">
-        <label>SMILES code</label>
+    <cds-input layout="compact">
+        <label>SMILES</label>
         <input placeholder="name" formControlName="smiles">
     </cds-input>
   
@@ -39,9 +39,12 @@
 
     <ng-template [ngIf]="condition">
         
-        <iframe #iframe src="./assets/lib/ketcher/ketcher.html" width="400" height="600"></iframe>
+        <iframe #iframe src="./assets/lib/ketcher/ketcher.html" width="800" height="600"></iframe>
         </ng-template>
   </div>
+
+  <cds-button (click)="toggleCondition()">open editor</cds-button>
+  <cds-button (click)="printurl()">submit</cds-button>
 
   </div>
   

@@ -7,6 +7,7 @@ import { CdsModule } from '@cds/angular';
 import { CdsDatalistModule } from '@cds/angular/datalist';
 import { ReactiveFormsModule } from "@angular/forms";
 import { ParametersExampleComponent } from './parameters-example/parameters-example.component'
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { ParametersExampleComponent } from './parameters-example/parameters-exam
     AppRoutingModule,
     CdsModule,
     CdsDatalistModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
